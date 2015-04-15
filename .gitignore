@@ -5,3 +5,14 @@
 
 # Generate on crash by the VM
 erl_crash.dump
+
+# Ember compiled assets
+/priv/static/assets
+/priv/static/crossdomain.xml
+/priv/static/index.html
+/priv/static/robots.txt
+/priv/static/testem.js
+/priv/static/tests/
+
+# Vim
+*.swp

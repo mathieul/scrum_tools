@@ -13,13 +13,12 @@ defmodule ScrumTools.Router do
   end
 
   scope "/", ScrumTools do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", ScrumTools do
-  #   pipe_through :api
-  # end
+  scope "/api", ScrumTools do
+    pipe_through :api
+  end
 end
