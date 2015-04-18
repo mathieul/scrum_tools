@@ -20,5 +20,7 @@ defmodule ScrumTools.Router do
 
   scope "/api", ScrumTools do
     pipe_through :api
+
+    resources "/daily_sections", DailySectionController
   end
 end

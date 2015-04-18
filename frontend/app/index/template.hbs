@@ -2,7 +2,7 @@
   <h1>Daily stand-up</h1>
 </div>
 <div class="row">
-  {{#each model.sections as |section|}}
+  {{#each model as |section|}}
     <div class="col-sm-4">
       {{daily-section content=section}}
     </div>
