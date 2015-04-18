@@ -1,0 +1,11 @@
+<h2>{{content.name}}</h2>
+<ul>
+  {{#each content.tasks as |task|}}
+    <li>
+      <label>
+        {{input type="checkbox" checked=task.completed}}
+        {{task.label}}
+      </label>
+    </li>
+  {{/each}}
+</ul>
