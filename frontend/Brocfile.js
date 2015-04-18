@@ -8,7 +8,7 @@ var app = new EmberApp();
 
 var bootstrapDir = app.bowerDirectory + '/bootstrap-sass-official/assets';
 // select bootstrap JavaScript components to include
-var bootstrapComponents = ['dropdown', 'alert', 'transition'];
+var bootstrapComponents = ['dropdown', 'alert', 'transition', 'collapse'];
 
 for (var index in bootstrapComponents) {
   app.import(bootstrapDir + '/javascripts/bootstrap/' + bootstrapComponents[index] + '.js');

@@ -1,13 +1,11 @@
 <div class="row">
-  <div class="col-sm-4">
-    <p class="lead">
-      Sidebar
-    </p>
-  </div>
-  <div class="col-sm-8">
-    <p>
-      More content here...
-    </p>
-  </div>
+  <h1>Daily stand-up</h1>
+</div>
+<div class="row">
+  {{#each sections as |section|}}
+    <div class="col-sm-4">
+      {{daily-section content=section}}
+    </div>
+  {{/each}}
 </div>
 
