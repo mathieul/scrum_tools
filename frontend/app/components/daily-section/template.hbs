@@ -1,4 +1,9 @@
-<h2>{{content.label}}</h2>
+<h2>
+  {{content.label}}
+  <button type="button" class="btn btn-default btn-sm">
+    <i class="fa fa-plus"></i>
+  </button>
+</h2>
 <ul>
   {{#each content.dailyTasks as |task|}}
     <li>
