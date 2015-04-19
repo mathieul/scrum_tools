@@ -1,18 +1,20 @@
-<h2>
-  {{content.label}}
-  <button type="button" class="btn btn-default btn-sm">
-    <i class="fa fa-plus"></i>
-  </button>
-</h2>
-<ul>
-  {{#each content.dailyTasks as |task|}}
-    <li>
-      <label>
-        {{input type="checkbox" checked=task.completed}}
-        {{task.label}}
-      </label>
-    </li>
-  {{else}}
-    <li><label>none</label></li>
-  {{/each}}
-</ul>
+<tr class="success">
+  <th colspan="2">
+    <span class="section-label">{{content.label}}</span>
+    <button type="button" class="btn btn-default btn-xs">
+      <i class="fa fa-plus"></i>
+    </button>
+  </th>
+</tr>
+
+{{#each content.dailyTasks as |task|}}
+  <tr>
+    <td>{{input type="checkbox" checked=task.completed}}</td>
+    <td>{{task.label}}</td>
+  </tr>
+{{else}}
+  <tr>
+    <td>&nbsp;</td>
+    <td>none</td>
+  </tr>
+{{/each}}
