@@ -7,7 +7,6 @@ defmodule ScrumTools.DailySectionController do
   plug :action
 
   def index(conn, _params) do
-    sections = Repo.all(DailySection)
-    render conn, daily_sections: sections
+    render conn, daily_sections: Repo.all(DailySection.with_tasks)
   end
 end
