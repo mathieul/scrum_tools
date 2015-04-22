@@ -12,13 +12,9 @@ var fontAwesome = pickFiles(app.bowerDirectory + '/fontawesome/fonts', {
 
 });
 
-var bootstrapDir = app.bowerDirectory + '/bootstrap-sass-official/assets';
+var materializeFonts = pickFiles(app.bowerDirectory + '/materialize/dist/font', {
+  srcDir: '/',
+  destDir: '/assets/fonts'
+});
 
-// select bootstrap JavaScript components to include
-var bootstrapComponents = ['dropdown', 'alert', 'transition', 'collapse'];
-
-for (var index in bootstrapComponents) {
-  app.import(bootstrapDir + '/javascripts/bootstrap/' + bootstrapComponents[index] + '.js');
-}
-
-module.exports = mergeTrees([app.toTree(), fontAwesome]);
+module.exports = mergeTrees([app.toTree(), fontAwesome, materializeFonts]);
