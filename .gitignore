@@ -9,6 +9,7 @@ erl_crash.dump
 # Ember compiled assets
 /priv/static/assets
 /priv/static/crossdomain.xml
+/priv/static/font
 /priv/static/index.html
 /priv/static/robots.txt
 /priv/static/testem.js
