@@ -1,10 +1,22 @@
-.daily-container {
-  tr > td:first-child {
-    width: 20px;
-  }
+.daily-category {
+  @extend .collection;
+}
 
-  .section-label {
-    display:  inline-block;
-    width:    100px;
-  }
+.daily-category-title {
+  @extend .collection-item;
+  @extend .purple;
+  @extend .darken-1;
+  @extend .white-text;
+}
+
+.daily-task {
+  @extend .collection-item;
+  @extend .blue;
+  @extend .lighten-5;
+}
+
+.daily-task-none {
+  @extend .collection-item;
+  @extend .purple;
+  @extend .lighten-5;
 }
