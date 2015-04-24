@@ -12,15 +12,15 @@ defmodule ScrumTools.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ScrumTools do
-    pipe_through :browser
-
-    get "/", PageController, :index
-  end
-
   scope "/api", ScrumTools do
     pipe_through :api
 
     resources "/daily_sections", DailySectionController
+  end
+
+  scope "/", ScrumTools do
+    pipe_through :browser
+
+    get "*anything", PageController, :index
   end
 end

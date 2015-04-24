@@ -1,20 +1,16 @@
-<tr class="success">
-  <th colspan="2">
-    <span class="section-label">{{content.label}}</span>
-    <button type="button" class="btn btn-default btn-xs">
-      <i class="fa fa-plus"></i>
-    </button>
-  </th>
-</tr>
+<li class="collection-item purple darken-1 white-text">
+  <h4>
+    {{content.label}}
+    <a class="btn-floating waves-effect waves-light deep-orange darken-1 right">
+      <i class="mdi-content-create"></i>
+    </a>
+  </h4>
+</li>
 
 {{#each content.dailyTasks as |task|}}
-  <tr>
-    <td>{{input type="checkbox" checked=task.completed}}</td>
-    <td>{{task.label}}</td>
-  </tr>
+  <li class="collection-item blue lighten-5">
+    {{task.label}}
+  </li>
 {{else}}
-  <tr>
-    <td>&nbsp;</td>
-    <td>none</td>
-  </tr>
+  <li class="collection-item purple lighten-5">none</li>
 {{/each}}
