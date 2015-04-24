@@ -1,11 +1,21 @@
 <li class="collection-item purple darken-1 white-text">
   <h4>
     {{content.label}}
-    <a class="btn-floating waves-effect waves-light deep-orange darken-1 right">
-      <i class="mdi-content-create"></i>
-    </a>
+    {{#if edit}}
+      {{#link-to 'daily-scrum.section.new-task' content
+                  class="btn-floating waves-effect waves-light light-blue accent-1 right"}}
+        <i class="mdi-content-add black-text"></i>
+      {{/link-to}}
+    {{else}}
+      {{#link-to 'daily-scrum.section' content
+                  class="btn-floating waves-effect waves-light deep-orange darken-1 right"}}
+        <i class="mdi-content-create"></i>
+      {{/link-to}}
+    {{/if}}
   </h4>
 </li>
+
+{{yield}}
 
 {{#each content.dailyTasks as |task|}}
   <li class="collection-item blue lighten-5">
