@@ -9,7 +9,7 @@ export default Router.map(function() {
   this.route('daily-scrum', function () {
     this.route('summary', {path: ''});
     this.route('section', {path: 'section/:section_id'}, function () {
-      this.route('new-task', {path: 'new-task'})
+      this.route('new-task', {path: 'new-task'});
     });
   });
 });
