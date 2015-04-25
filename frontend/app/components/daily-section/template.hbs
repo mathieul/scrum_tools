@@ -1,26 +1,31 @@
-<li class="collection-item purple darken-1 white-text">
-  <h4>
-    {{content.label}}
-    {{#if edit}}
-      {{#link-to 'daily-scrum.section.new-task' content
-                  class="btn-floating waves-effect waves-light light-blue accent-1 right"}}
-        <i class="mdi-content-add black-text"></i>
-      {{/link-to}}
-    {{else}}
-      {{#link-to 'daily-scrum.section' content
-                  class="btn-floating waves-effect waves-light deep-orange darken-1 right"}}
-        <i class="mdi-content-create"></i>
-      {{/link-to}}
-    {{/if}}
-  </h4>
-</li>
+<div class="panel-heading clearfix">
+  <h3 class="panel-title pull-left">{{content.label}}</h3>
+  {{#unless edit}}
+    {{#link-to 'daily-scrum.section' content class="btn btn-default pull-right"}}
+      <i class="fa fa-pencil"></i>
+      Edit
+    {{/link-to}}
+  {{/unless}}
+</div>
 
-{{yield}}
+<div class="panel-body">
+  <div class="bootcards-list">
+    <div class="panel panel-default">
+      <div class="list-group">
+        {{#each content.dailyTasks as |task|}}
+          <div class="list-group-item">
+            <p class="list-group-item-text">{{task.label}}</p>
+          </div>
+        {{else}}
+          <div class="list-group-item">
+            <p class="list-group-item-text"><em>None</em></p>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
 
-{{#each content.dailyTasks as |task|}}
-  <li class="collection-item blue lighten-5">
-    {{task.label}}
-  </li>
-{{else}}
-  <li class="collection-item purple lighten-5">none</li>
-{{/each}}
+<div class="panel-footer">
+  <small>TODO</small>
+</div>

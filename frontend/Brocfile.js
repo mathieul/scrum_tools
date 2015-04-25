@@ -12,9 +12,16 @@ var fontAwesome = pickFiles(app.bowerDirectory + '/fontawesome/fonts', {
 
 });
 
-var materializeFonts = pickFiles(app.bowerDirectory + '/materialize/dist/font', {
-  srcDir: '/',
-  destDir: '/assets/fonts'
+var fontIcomoon = pickFiles(app.bowerDirectory + '/bootcards/dist/fonts', {
+    srcDir: '/',
+    destDir: '/assets/fonts'
+
 });
 
-module.exports = mergeTrees([app.toTree(), fontAwesome, materializeFonts]);
+app.import(app.bowerDirectory + '/bootstrap/dist/css/bootstrap.css');
+app.import(app.bowerDirectory + '/bootcards/dist/css/bootcards-ios.css');
+
+app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.js');
+app.import(app.bowerDirectory + '/bootcards/dist/js/bootcards.js');
+
+module.exports = mergeTrees([app.toTree(), fontAwesome, fontIcomoon]);

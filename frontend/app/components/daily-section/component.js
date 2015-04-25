@@ -6,6 +6,5 @@ export default Ember.Component.extend({
   edit: false,
 
   /* internal */
-  tagName: 'ul',
-  classNames: ['collection'],
+  classNames: ['panel', 'panel-default']
 });
