@@ -8,24 +8,38 @@
   {{/unless}}
 </div>
 
-<div class="panel-body">
+{{#if edit}}
   <div class="bootcards-list">
     <div class="panel panel-default">
       <div class="list-group">
         {{#each content.dailyTasks as |task|}}
-          <div class="list-group-item">
-            <p class="list-group-item-text">{{task.label}}</p>
-          </div>
+          {{#link-to 'daily-scrum.section.edit-task' task class="list-group-item"}}
+            <p class="list-group-item-text">
+              {{task.label}}
+            </p>
+          {{/link-to}}
         {{else}}
-          <div class="list-group-item">
-            <p class="list-group-item-text"><em>None</em></p>
-          </div>
+          {{#link-to 'daily-scrum.section.new-task' class="list-group-item"}}
+            <p class="list-group-item-text">NONE</p>
+          {{/link-to}}
         {{/each}}
       </div>
     </div>
   </div>
-</div>
-
-<div class="panel-footer">
-  <small>TODO</small>
-</div>
+{{else}}
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <tbody>
+        {{#each content.dailyTasks as |task|}}
+          <tr>
+            <td>{{task.label}}</td>
+          </tr>
+        {{else}}
+          <tr>
+            <td>NONE</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{/if}}

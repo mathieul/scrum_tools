@@ -10,6 +10,7 @@ export default Router.map(function() {
     this.route('summary', {path: ''});
     this.route('section', {path: 'section/:section_id'}, function () {
       this.route('new-task', {path: 'new-task'});
+      this.route('edit-task', {path: 'task/:task_id'});
     });
   });
 });
