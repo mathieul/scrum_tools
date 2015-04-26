@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    willTransition(transition) {
+    willTransition() {
       this.get('controller').set('current', false);
     },
 

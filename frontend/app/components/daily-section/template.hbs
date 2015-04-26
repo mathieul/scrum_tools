@@ -1,9 +1,14 @@
 <div class="panel-heading clearfix">
   <h3 class="panel-title pull-left">{{content.label}}</h3>
   {{#if edit}}
-    {{#link-to 'daily-scrum.summary' class="btn btn-primary pull-right"}}
-      Done
-    {{/link-to}}
+    <div class="btn-group pull-right">
+      {{#link-to 'daily-scrum.section.new-task' content class="btn btn-success"}}
+        <i class="fa fa-plus"></i>
+      {{/link-to}}
+      {{#link-to 'daily-scrum.summary' class="btn btn-primary"}}
+        <i class="fa fa-check"></i>
+      {{/link-to}}
+    </div>
   {{else}}
     {{#link-to 'daily-scrum.section' content class="btn btn-default pull-right"}}
       <i class="fa fa-pencil"></i>
