@@ -2,8 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
+    let section = this.modelFor('daily-scrum.section');
+
     return this.store.createRecord('daily-task', {
-      dailySection: this.modelFor('daily-scrum.section')
+      position: section.get('dailyTasks.length'),
+      dailySection: section
     });
   },
 
