@@ -9,6 +9,4 @@ config :scrum_tools, ScrumTools.Endpoint,
 # Configure your database
 config :scrum_tools, ScrumTools.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "scrum_tools_prod"
+  url: "postgres://zkcgivkhktbuze:M_i7oOMo_8YeWZ2VL8m4U5hBW-@ec2-54-163-238-169.compute-1.amazonaws.com:5432/dcg1laukb4pj3p"
