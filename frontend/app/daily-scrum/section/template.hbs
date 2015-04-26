@@ -1,9 +1,8 @@
-<div class="section">
-  <div class="row">
-    <div class="col-full">
-      {{#daily-section content=model edit=true}}
-        {{outlet}}
-      {{/daily-section}}
-    </div>
+<div class="row">
+  <div class="col-sm-6 bootcards-cards {{if current '' 'hidden-sm hidden-xs'}}">
+    {{daily-section content=model edit=true}}
+  </div>
+  <div class="col-sm-6 bootcards-cards">
+    {{outlet}}
   </div>
 </div>

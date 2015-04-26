@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+  <div class="panel-heading clearfix">
+    <h3 class="panel-title pull-left">Edit Task</h3>
+    <div class="btn-group pull-right">
+      {{#link-to 'daily-scrum.section' content.dailySection class="btn btn-danger"}}
+        <i class="fa fa-times"></i>
+        Cancel
+      {{/link-to}}
+      <button class="btn btn-success" type="submit">
+        <i class="fa fa-check"></i>
+        Save
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-body">
+    <form class="form-horizontal">
+      <div class="form-group col-sm-10 col-sm-offset-1">
+        {{textarea value=content.label rows="6" class="form-control"}}
+      </div>
+    </form>
+  </div>
+</div>
