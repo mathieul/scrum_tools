@@ -10,14 +10,14 @@ export default Ember.Component.extend({
 
   actions: {
     save() {
-      this.get('content').save();
+      this.get('content').save().then(() => this.sendAction());
     },
 
     delete() {
       let task = this.get('content');
 
       task.deleteRecord();
-      task.save();
+      task.save().then(() => this.sendAction());
     }
   }
 });
