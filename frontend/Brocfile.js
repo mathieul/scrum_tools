@@ -19,8 +19,8 @@ var fontIcomoon = pickFiles(app.bowerDirectory + '/bootcards/dist/fonts', {
 });
 
 app.import(app.bowerDirectory + '/bootstrap/dist/css/bootstrap.css');
-// app.import(app.bowerDirectory + '/bootcards/dist/css/bootcards-ios.css');
-app.import(app.bowerDirectory + '/bootcards/dist/css/bootcards-desktop.css');
+app.import(app.bowerDirectory + '/bootcards/dist/css/bootcards-ios.css');
+// app.import(app.bowerDirectory + '/bootcards/dist/css/bootcards-desktop.css');
 
 app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.js');
 app.import(app.bowerDirectory + '/bootcards/dist/js/bootcards.js');
